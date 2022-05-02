@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Goyang KIM">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Goyang KIM">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="一些朋友看着这个标题应该想到俺说的是啥。没错，机缘巧合之下，俺最近补了这个神奇的系列 Magical Girl Lyrical Nanoha 。其实俺很早之前就已经听说过这个系列，但当时年轻的俺对魔法少女此类作品的印象，一种是 Cardcapter Sakura 、Pretty Cure、 Bothersome Witch Doremi 这类面向孩子(?)的传统日常系，另一种是 Puella Ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从魔法少女到机动战士再到格斗少女">
+<meta property="og:url" content="https://goyang.kim/article/from-magical-girl-to-mobile-suit-to-boxing-girl/index.html">
+<meta property="og:site_name" content="GOYANG Club">
+<meta property="og:description" content="一些朋友看着这个标题应该想到俺说的是啥。没错，机缘巧合之下，俺最近补了这个神奇的系列 Magical Girl Lyrical Nanoha 。其实俺很早之前就已经听说过这个系列，但当时年轻的俺对魔法少女此类作品的印象，一种是 Cardcapter Sakura 、Pretty Cure、 Bothersome Witch Doremi 这类面向孩子(?)的传统日常系，另一种是 Puella Ma">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-08T13:10:59.000Z">
+<meta property="article:modified_time" content="2022-05-02T02:20:27.293Z">
+<meta property="article:author" content="Goyang KIM">
+<meta property="article:tag" content="ACGN">
+<meta property="article:tag" content="魔法少女">
+<meta name="twitter:card" content="summary">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/images/favicon.jpg">
+    
+    <title>从魔法少女到机动战士再到格斗少女 · Goyang&#39;s Club</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>GOYANG Club</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">GOYANG Club</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">从魔法少女到机动战士再到格斗少女</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/images/from-magical-girl-to-mobile-suit-to-boxing-girl-cover.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                从魔法少女到机动战士再到格斗少女
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="ACGN">ACGN</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="魔法少女">魔法少女</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">2.5k</span>阅读时长: <span class="post-count reading-time">8 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2020/04/08</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <p>一些朋友看着这个标题应该想到俺说的是啥。没错，机缘巧合之下，俺最近补了这个神奇的系列 <em>Magical Girl Lyrical Nanoha</em> 。其实俺很早之前就已经听说过这个系列，但当时年轻的俺对魔法少女此类作品的印象，一种是 <em>Cardcapter Sakura</em> 、<em>Pretty Cure</em>、 <em>Bothersome Witch Doremi</em> 这类面向孩子(?)的传统日常系，另一种是 <em>Puella Magi Madoka Magica</em> 这类黑暗类的。对前者，当年的俺由于在孩童时看了不少，俨然提不起兴趣；而后者，由于设定过于黑暗，把还在青春期的俺吓得不要不要的。所以没有观看这部中文译名普通的魔法少女作品。之后再次接触此作品，是看到一本同人志。这本同人志以“暗之书”复活为背景进行叙事。看完之后，俺更加笃定了这是一部子供向的传统日常、或者说是带有一丝异世界魔法英雄设定的魔法少女故事（类似 <em>Twin Princess of Wonder Planet</em> ）。</p>
+<p>直到最近，俺又在第五个英文字母网站上看到了这个作品的同人志。看完后俺突然对这个系列起了兴趣。原因可能是最近新冠肺炎长居家中的剧荒，还有另一个原因是俺前一段时间才重新补了同是魔法少女设定的 <em>Little Witch Academia</em>，对类似设定的动画有亲切感，便决定重新补这个系列。</p>
+<p>去查了一下资料，俺发现这个系列是有香港电视台配过的（虽然不是TVB），虽然是十年前配的作品，但是由于这个电视台最近拿到了新的牌照在新频道上重播了这个系列。俺试听了一下第一季，听到了两个很熟悉的声音：配Nanoha的吴梅女士的声音，刚好也是十三年前，她给上文提到的 <em>Twin Princess of Wonder Planet</em> 的主角Fine配音；另一把熟悉的声音是魏惠娥小姐，现在她已经转往TVB工作，当年还是外包的配音员，本剧大部分配角都由她声演（这在外包配音中很常见，而在TVB自有配音中不太可能出现。像 <em>Love Live</em> 这样的几乎全是女性的动画，TVB都可以做到几乎一人一角）</p>
+<p>扯远了，俺一边合成第一季的粤配音轨，一边看完第一季。看完后，俺终于明白了主角暴君以炮交友是啥意思了。也不知为何俺对这种用友谊拯救反派的桥段特别触动，当即就到萌娘和维基查阅了相关剧情（对感兴趣的系列在继续欣赏前查阅设定甚至是剧透是俺一贯的作风，俺认为这样可以在欣赏时关注细节）。</p>
+<p><em>Magical Girl Lyrical Nanoha</em>（下称 <em>MGLN</em> ） 第一季开头具有基本的魔法少女剧情，一个平凡的少女机缘巧合之下遇到来自异世界的可爱宠物，宠物表示我来到地球是为了完成使命，在本剧里是收集宝石，于是给予主角变身能力。照这个剧情下去应该是宠物和主角打打怪，或者遇上劲敌阻止主角完成使命，剧终宠物完成任务回到异世界，这里的异世界通常具有奇幻色彩，例如魔法界、妖精界，采用一种类似于君主制的政治体制，而宠物通常是身居高位人士，例如需要经历磨难方可取得继承权的王子或公主、家乡遇到邪恶势力入侵需要到异世界寻找外援的国王等，<em>MGLN</em> 开头数集是类似的剧情，甚至安排了同是魔法少女的 Fate 出场，大家一起抢宝石。但画风到了第八集就变了，一艘不符合魔法异世界设定的宇宙飞船突然出现，飞船的武官很帅气地阻止了两位主角的魔法打架，到这里观众才明白，并没有什么君主制的奇幻异世界，只有作为公务员的魔法师。</p>
+<p>从这集起世界观开始展开，观众发现没有什么化作宠物的异世界王子，Yuuno只是知识渊博的考古工作者；两位主角虽然在后续数季展现出极高的魔法能力，以及本季便提及的极高的魔法天赋，但是并非全能的存在。剧情也变成了管理局追捕疯狂科学家及回收危险实验材料的科学剧本，而魔法则变为科学架构下的一种受到管控的存在，魔法不再是上古神灵的奇怪祭祀的产物，而是可以被研究、开发，变成了科学的某个领域的存在。这种一本正经的胡说八道的魔法设定跟SCP十分类似，很符合俺的胃口。</p>
+<p><em>MGLN</em> 系列的一大特点是流水线的“反派”洗白，这里的反派使用引号括起来，是因为剧中成功洗白、被收入主角后宫团队或主角后宫团队的后宫团队的角色，大多并不是无法洗白的类型（好像很拗口？）。他们或是有着可怜的身世、被精神控制、为了一个善良的目标或者纯粹是年幼无知，而洗白转正的角色们或成为了下一个作品的主角团队中的一员，或干脆自立门户成为外传主角。用Kirito的话说就是“都是从事着正当职业”。随着系列作品的推进，观众发现整个作品的角色逐渐增多，而编剧毒株似乎有意让整个系列变成群像剧，或者可能只是不擅长对角色深入挖掘，因此需要通过引入新的角色带动故事发展，小的如 <em>MGLN StrikerS</em> 的广播剧，大的如 <em>MGLN Vivid</em> 和 <em>Vivid Strike</em>。俺将这种角色的出场方式称之为俄罗斯方块式的角色登场方式：新角色出场，到本季作品结束时角色固定不再深入挖掘，类似于俄罗斯方块中从上到下落到底部便不再活动，然后经过几季作品后，角色彻底消失，如同俄罗斯方块中底部方块在填满后消失一般。</p>
+<p>作品的其中一个我个人认为的槽点是A’s到StrikerS的时间跨度过大，带来了主角外貌巨大变化，更重要的，主角性格的变化。无印和A’s系列主角的性格我认为可以用一个词概括——善良，但也有率真的一面。但到了StrikerS却给俺一种沧桑感，似乎在职场上见到了很多黑暗面，变成了能为下属撑起一片天的存在。这个沧桑感来由的“伏笔”卖了9集才通过其他角色的侧面描述叙述出来。当然是人都能想到剧情中的时空管理局肯定会有很大的黑暗面，只不过俺觉得观众会认为编剧没有给机会让观众和主角一起经历这个过程，就像“你原本很了解的人，经过几年的分别，你发现你完全摸不透他的心”这种感觉。</p>
+<p><em>MGLN</em> 系列其中一个问题是，作品是粉丝向的。像目前一些轻改、漫改动画是为了提高书籍销量而进行动画化宣传，或者是如 <em>Love Live</em> 这种动画化是为了提高人气不同，<em>MGLN</em> 所有的作品无论动画、漫画、广播剧都是独立的剧情，而且广播剧的角色同样拥有上文提到的“俄罗斯方块式角色登场方式”的特征，而且编剧完全不会对其他载体出场的人物进行描写，这就导致了新粉丝不能很好地从系列的某个作品入手。这可能导致新的作品，例如动画，无法吸引到新的观众。但俺认为，如果编剧能彻底脱离主角Nanoha，将现有的多部作品整合构建<em>Lyrical Universe</em>，会给系列带来不一样的景色。作者似乎在做这种尝试，但是拿捏不准直接做成了平行宇宙，目前两大平行世界线（TV线、剧场版线）以及从属于TV线的游戏支线，这几条线围绕着艾尔托利亚这个世界进行时空穿越，说实话要不是有大神制作的威力加强版时间线图俺真的不知道怎么补。</p>
+<p>事实上本系列各个作品的属性分明，对于喜好正统魔法少女的观众，有无印和A’s两季动画；对于喜好刚大木这类近未来政治风的观众，有StrikerS和腰斩的Force；对于喜爱看大小姐卖萌的观众，也有Vivid和Vivid Strike；而对于俺这种各方面都很喜欢，但最喜欢的还是世界观的观众，除开动画，也有各类广播剧补充剧情，还有啥不满足呢（滑稽）。<del>我才不会说是想看主角两妇妇恩爱和太子卖萌并收后宫呢</del>。</p>
+<p>其实说了这么多，俺还是很喜欢这个系列的，可能是对反派洗白收后宫的套路的喜爱；或者是日常（Vivid篇）和宏大题材（StrikerS和Force）相互穿插，让俺既能看到政治、心理题材，也能看妹子卖萌的原因吧。</p>
+<blockquote>
+<p>码下这篇东西的草稿时，俺还只是看了系列的无印和StrikerS，现在俺只剩下零星几篇广播剧没有听了，管他什么妹子卖萌还是妇妇恩爱还是后宫还是政治心理，我全都要！</p>
+</blockquote>
+
+    </article>
+    <!-- license -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://goyang.kim">Goyang KIM</a>
+            <p>原文链接：<a href="https://goyang.kim/article/from-magical-girl-to-mobile-suit-to-boxing-girl/">https://goyang.kim/article/from-magical-girl-to-mobile-suit-to-boxing-girl/</a>
+            <p>发表日期：<a href="https://goyang.kim/article/from-magical-girl-to-mobile-suit-to-boxing-girl/">April 8th 2020, 1:10:59 pm</a>
+            <p>更新日期：<a href="https://goyang.kim/article/from-magical-girl-to-mobile-suit-to-boxing-girl/">May 2nd 2022, 2:20:27 am</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/article/anime-comment/" title="动画短评">
+                    <div class="nextTitle">动画短评</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:goyang.kim@samersions.net" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 2
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/14</span>
+            <a class="archive-post-title" href="/article/anime-comment/">动画短评</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/09</span>
+            <a class="archive-post-title" href="/article/from-magical-girl-to-mobile-suit-to-boxing-girl/">从魔法少女到机动战士再到格斗少女</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="ACGN">
+                <span class="iconfont-archer">&#xe606;</span>
+                ACGN
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="魔法少女">
+                <span class="iconfont-archer">&#xe606;</span>
+                魔法少女
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "https://goyang.kim",
+        root: siteMetaRoot,
+        author: "Goyang KIM"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
